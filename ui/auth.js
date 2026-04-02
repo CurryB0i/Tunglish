@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://tunglish.onrender.com/";
+export const API_BASE_URL = "https://tunglish.onrender.com";
 const form = document.getElementsByTagName('form')[0];
 
 const user = {
@@ -24,6 +24,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
+    console.log("jujiman")
     const res = await fetch(`${API_BASE_URL}/login`, {
       method: "POST",
       headers: {
@@ -34,13 +35,13 @@ const handleSubmit = async (e) => {
     const data = await res.json();
 
     if(data.ok) {
-      console.log(data)
       localStorage.setItem('token', data.token);
       localStorage.setItem('email', user.email);
       window.location.href = "engToTung.html";
-      form.dataet();
+      form.reset();
     }
   } catch (err) {
+    alert(err);
     console.error(err);
   }
 }

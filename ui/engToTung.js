@@ -54,6 +54,7 @@ const handleSubmit = async (e) => {
     setTimeout(() => submitBtn.classList.remove('submitted'), 500);
     form.reset();
   } catch (err) {
+    alert(err);
     console.error(err);
   }
 }
