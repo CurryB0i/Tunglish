@@ -10,7 +10,7 @@ import os
 
 load_dotenv()
 app = FastAPI()
-client = MongoClient(os.getenv("DATABSE_URL"))
+client = MongoClient(os.getenv("DATABASE_URL"))
 db = client["main"]
 userCollection = db["users"]
 parallelCorpusCollection = db["parallel_corpus"]
