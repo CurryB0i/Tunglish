@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://tunglish.onrender.com";
+export const API_BASE_URL = "http://localhost:8000";
 const form = document.getElementsByTagName('form')[0];
 
 const user = {
