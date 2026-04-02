@@ -41,9 +41,9 @@ const handleSubmit = async (e) => {
       },
       body: JSON.stringify(data)
     });
-    const data = await res.json();
+    const resData = await res.json();
 
-    if(!data.ok) {
+    if(!resData.ok) {
       alert("Something went wrong!");
       submitBtn.classList.remove('submitting');
       form.reset();
