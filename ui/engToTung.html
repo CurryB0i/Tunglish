@@ -13,7 +13,7 @@
     <h1>English&lt;===&gt;Tunglish</h1>
     <h1>Parallel Corpus Contributor</h1>
   </div>
-  <form onsubmit="handleSubmit(event)">
+  <form id="form">
     <div class="english-input">
       <label for="english">English: </label>
       <input 
@@ -21,9 +21,8 @@
        id="english"
        name="english"
        placeholder="English here..."
-       oninput="handleInput(event)"
        required
-      >
+      />
     </div>
     <div class="tunglish-input">
       <label for="tunglish">Tunglish: </label>
@@ -32,9 +31,8 @@
        id="tunglish"
        name="tunglish"
        placeholder="tunglish here..."
-       oninput="handleInput(event)"
        required
-      >
+      />
     </div>
     <button type="submit" id="submit-btn">
       Submit

@@ -7,7 +7,7 @@ if(!token || !email)
   window.location.href = 'index.html';
 
 const submitBtn = document.getElementById("submit-btn");
-const form = document.getElementsByTagName('form')[0];
+const form = document.querySelector('form');
 const data = {
   email,
   token,
@@ -58,3 +58,8 @@ const handleSubmit = async (e) => {
     console.error(err);
   }
 }
+
+document.querySelectorAll("input").forEach(input => {
+  input.addEventListener("input", handleInput);
+});
+form.addEventListener("submit", handleSubmit);

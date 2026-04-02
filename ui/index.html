@@ -10,14 +10,14 @@
 
 <body>
   <h1>Auth</h1>
-  <form onsubmit="handleSubmit(event)">
+  <form id="form">
     <div>
       <label for="email">Email</label>
-      <input id="email" name="email" type="email" required oninput="handleInput(event)">
+      <input id="email" name="email" type="email" required />
     </div>
     <div>
       <label for="email" onsubmit="handleSubmit(event)">Password</label>
-      <input id="password" name="password" type="password" required oninput="handleInput(event)">
+      <input id="password" name="password" type="password" required />
     </div>
     <button type="submit">Login</button>
   </form>

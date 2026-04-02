@@ -45,3 +45,8 @@ const handleSubmit = async (e) => {
     console.error(err);
   }
 }
+
+document.querySelectorAll("input").forEach(input => {
+  input.addEventListener("input", handleInput);
+});
+form.addEventListener("submit", handleSubmit);
