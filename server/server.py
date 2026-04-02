@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from pymongo import MongoClient
 from fastapi import HTTPException
-from bcrypt import hashpw, gensalt
+from bcrypt import hashpw, gensalt, checkpw
 from dotenv import load_dotenv
 import secrets
 import os
@@ -17,10 +17,7 @@ parallelCorpusCollection = db["parallel_corpus"]
 
 app.add_middleware(
   CORSMiddleware,
-  allow_origins=[
-    "http://localhost:5500",
-    "http://127.0.0.1:5500"
-  ],
+  allow_origins=["*"],
   allow_credentials=True,
   allow_methods=["*"],
   allow_headers=["*"],
@@ -61,8 +58,6 @@ def signup(user: SecretUser):
   user = userCollection.insert_one({ "email": user.email, "password": password })
 
   return { "ok": True, "status_code": 200, "message": "Authorized" }
-
-from bcrypt import checkpw
 
 @app.post("/login")
 def login(user: User):
