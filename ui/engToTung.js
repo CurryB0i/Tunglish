@@ -1,3 +1,5 @@
+import { API_BASE_URL } from "./auth";
+
 const token = localStorage.getItem('token');
 const email = localStorage.getItem('email');
 console.log(typeof token)
@@ -32,7 +34,7 @@ const handleSubmit = async (e) => {
 
   try {
     submitBtn.classList.add('submitting');
-    const res = await fetch("http://127.0.0.1:8000/engToTung", {
+    const res = await fetch(`${API_BASE_URL}/engToTung`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

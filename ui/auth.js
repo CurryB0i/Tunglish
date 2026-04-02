@@ -1,3 +1,4 @@
+export const API_BASE_URL = "https://tunglish.onrender.com/";
 const form = document.getElementsByTagName('form')[0];
 
 const user = {
@@ -23,7 +24,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const res = await fetch("http://127.0.0.1:8000/login", {
+    const res = await fetch(`${API_BASE_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
