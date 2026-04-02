@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: "Playwrite IE", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.header {
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    label{
+      width: 10%;
+    }
+    input{
+      width: 30%;
+      border: 2px solid black;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+  button{
+    border: 2px solid black;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    .loader{
+      display: none;
+      font-size: 20px;
+      animation: load 1s ease-in-out infinite;
+    }
+    .check{
+      display: none;
+      color: green;
+      font-weight: bold;
+    }
+  }
+
+  button.submitting{
+    .loader{
+      display: block;
+    }
+  }
+  
+  button.submitted{
+    .check{
+      display: block;
+    }
+  }
+}
+
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+@keyframes load {
+  from{
+    rotate: 0deg;
+  } to {
+    rotate: 360deg;
+  }
+}
+
+@media (max-width: 900px) {
+  h1{
+    font-size: 25px;
+  }
+  form{
+    div{
+      gap: 60px;
+      input{
+        width: 50%;
+      }
+    }
+  }
+}

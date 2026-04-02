@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Auth</title>
+</head>
+
+<body>
+  <h1>Auth</h1>
+  <form onsubmit="handleSubmit(event)">
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required oninput="handleInput(event)">
+    </div>
+    <div>
+      <label for="email" onsubmit="handleSubmit(event)">Password</label>
+      <input id="password" name="password" type="password" required oninput="handleInput(event)">
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <script src="auth.js" type="application/javascript" />
+</body>
+
+</html>

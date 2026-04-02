@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eng - Tung</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=progress_activity" />
+</head>
+<body>
+  <div class="header">
+    <h1>English&lt;===&gt;Tunglish</h1>
+    <h1>Parallel Corpus Contributor</h1>
+  </div>
+  <form onsubmit="handleSubmit(event)">
+    <div class="english-input">
+      <label for="english">English: </label>
+      <input 
+       type="text"
+       id="english"
+       name="english"
+       placeholder="English here..."
+       oninput="handleInput(event)"
+       required
+      >
+    </div>
+    <div class="tunglish-input">
+      <label for="tunglish">Tunglish: </label>
+      <input 
+       type="text"
+       id="tunglish"
+       name="tunglish"
+       placeholder="tunglish here..."
+       oninput="handleInput(event)"
+       required
+      >
+    </div>
+    <button type="submit" id="submit-btn">
+      Submit
+      <span class="material-symbols-outlined loader">progress_activity</span>
+      <span class="material-icons check">check</span>
+    </button>
+  </form>
+  <script src="engToTung.js" type="application/javascript"></script>
+</body>
+</html>
