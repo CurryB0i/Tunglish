@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://tunglish.onrender.com";
+const API_BASE_URL = "https://tunglish.onrender.com";
 const form = document.getElementsByTagName('form')[0];
 
 const user = {

@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "./auth";
+const API_BASE_URL = "https://tunglish.onrender.com";
 
 const token = localStorage.getItem('token');
 const email = localStorage.getItem('email');
